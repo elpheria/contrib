@@ -1,3 +1,7 @@
 # contrib
 This is a place for various tools which Qaap sysadmins, devs and devops use.  
 There should be a specific readme document for each tool in a separate corresponding directory.
+
+## As a submodule/subproject
+This repository is also used as a submodule for our node microservice projects.
+Please, refer to [this document](https://github.com/qaap/node-handbook/blob/master/Microservice%20Development.md#general-purpose-tools) if you're changing this repository directly from your project.
