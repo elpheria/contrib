@@ -3,6 +3,12 @@
 import os, sys
 from urllib.parse import urlparse
 from shutil import which
+import argparse
+
+parser = argparse.ArgumentParser()
+parser.add_argument('-t', '--test', help='run tests after docker-compose',
+                    action='store_true')
+args = parser.parse_args()
 
 # Gopkg.lock should always be present, so we check on it
 # to see if we're positioned correctly
@@ -41,4 +47,7 @@ if which('docker-compose') == None:
     print('docker-compose should be available in PATH. bye.')
     sys.exit(1)
 
-os.system('docker-compose up')
+if args.test == True:
+    os.system('docker-compose -f docker-compose.test.yml up')
+else:
+    os.system('docker-compose up')
