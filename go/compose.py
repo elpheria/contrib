@@ -48,6 +48,6 @@ if which('docker-compose') == None:
     sys.exit(1)
 
 if args.test == True:
-    os.system('docker-compose -f docker-compose.test.yml up')
+    os.system('docker-compose -f docker-compose.test.yml up --abort-on-container-exit')
 else:
     os.system('docker-compose up')
