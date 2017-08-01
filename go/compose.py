@@ -40,6 +40,7 @@ if os.uname().sysname == 'Darwin':
         print('rsync should be available in PATH. bye.')
         sys.exit(1)
 
+    os.system('ssh docker@' + docker_host + ' "rm -rf *"')
     os.system('rsync -avzhe ssh --progress . docker@' + docker_host + ':' +
               os.environ['DOCKER_SERVICECODE_PWD'])
 
