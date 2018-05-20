@@ -1,5 +1,5 @@
 # contrib
-This is a place for various tools which Qaap sysadmins, devs and devops use.  
+This is a place for various tools which Elpheria sysadmins, devs and devops use.  
 There should be a specific readme document for each tool in a separate corresponding directory.
 
 ## How to use this repository as a submodule/subproject
